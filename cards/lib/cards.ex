@@ -8,8 +8,10 @@ defmodule Cards do
     cards = ["Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "King", "Queen", "Jack"]
     suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
 
-    for suit <- suits do
-      suit
+    for card <- cards do
+      for suit <- suits do
+        "#{card} of #{suit}"
+      end
     end
   end
 
