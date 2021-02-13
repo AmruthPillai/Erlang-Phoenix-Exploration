@@ -1,11 +1,25 @@
 defmodule Cards do
-
   def hello do
     "Hello, World!"
   end
 
   def create_deck do
-    values = ["Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "King", "Queen", "Jack"]
+    values = [
+      "Ace",
+      "Two",
+      "Three",
+      "Four",
+      "Five",
+      "Six",
+      "Seven",
+      "Eight",
+      "Nine",
+      "Ten",
+      "King",
+      "Queen",
+      "Jack"
+    ]
+
     suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
 
     for value <- values, suit <- suits do
@@ -38,9 +52,8 @@ defmodule Cards do
   end
 
   def create_hand(hand_size) do
-    deck = Cards.create_deck()
-    deck = Cards.shuffle(deck)
-    Cards.deal(deck, hand_size)
+    Cards.create_deck()
+    |> Cards.shuffle()
+    |> Cards.deal(hand_size)
   end
-
 end
