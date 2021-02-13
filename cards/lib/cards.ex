@@ -4,10 +4,10 @@ defmodule Cards do
   """
 
   @doc """
-    Returns the string "Hello, World!"
+    Returns the atom `:world`
   """
   def hello do
-    "Hello, World!"
+    :world
   end
 
   @doc """
