@@ -1,4 +1,8 @@
 defmodule Cards do
+  @moduledoc """
+    Provides methods for creating and handling a deck of cards
+  """
+
   def hello do
     "Hello, World!"
   end
